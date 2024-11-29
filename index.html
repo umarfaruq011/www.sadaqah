@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sadaqah Website</title>
+    <!-- Link CSS -->
+   
+    <link rel="icon" href="LOGO.PNG.png" type="image/x-icon">
+</head>
+
+<body>
+    <STYLe>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: #dbd0d08e;
+}
+ /* main page style */
+ .join{
+    font-size: 45px;
+    font-family: arial;
+    margin-top: 25px;
+    background-color: rgb(46, 226, 55);
+    color: rgba(253, 253, 253, 0.822);
+    border-style: solid;
+    border-radius: 25px;
+    height: 70px;
+    width: 250px;
+   
+
+}
+/* main page style */
+.join:hover{
+   background-color: rgb(252, 4, 4);
+    color: rgb(0, 0, 0);
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 55px;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 50px;
+    background-color:rgb(12, 11, 11);
+    
+    border: none;
+    z-index: 100;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4a323;
+    
+}
+.lgo{
+    text-align: center;
+  }
+  .image {
+      width: 300px;
+      height: auto;
+      margin-top: 50px;
+      transition: filter 0.5s ease;
+      border-radius: 100px;
+  }
+
+  .red-filter {
+      filter: brightness(1.2) hue-rotate(-90deg);
+  }
+  .bott{
+      border: none;
+      background-color: black;
+      
+  }
+  .home{
+      border: none;
+      background-color: black;
+  }
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background-color: #000000;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+   
+   
+
+   .hero-content :hover{
+    color: rgb(18, 190, 162);
+}
+
+.nav-list li a:hover{
+color: rgb(209, 29, 155);
+text-decoration: underline;
+
+}
+.donate-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.donate-btn:hover{
+    
+    background-color: #36ff0e;
+}
+.pages{
+    font-family: roboto,arial;
+    font-size: 18px;
+    position: absolute;
+    margin-left:55px;
+    justify-content: space-between;
+    align-items: center;
+}
+  .page{
+   height: 10%;
+   width: 20px;
+   
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+.sadakah {
+font-family: 'Dancing Script', cursive;
+font-size: 25PX;
+  }
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 50px;
+    margin-top: 30px;
+    display: block;
+}
+
+.hero-content {
+    max-width: 40%;
+}
+
+.hero-content h3 {
+    font-size: 24px;
+    color: #f01010;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #f4a323;
+    margin-bottom: 0;
+}
+
+.hero-content .btn {
+    background-color: #000000e0;
+    color: rgb(255, 235, 235);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.hero-image{
+    
+    margin-top: -380px;
+  
+    display: inline-block;
+  margin-left: 800px;
+  
+}
+
+
+/* Mobile Navigation */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list.visible {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
+    </STYLe>
+     <!-- Dynamic Content Container -->
+     <div id="content">
+        <!-- Initial Welcome Page Content -->
+         <div>
+        
+        <div class="lgo">
+            <img id="image" class="image" src="logos.webp" alt="Image with Red Filter">
+           <div class="sadakah">
+            Welcome To Sadaqah <br>
+            We are glad to have you here. Click below to explore our website!
+            <br> <button class="join" id="joinUsBtn">Join Us</button>
+        </div>
+        </div>
+         </div>
+       </div>
+   
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+    <script>// Add "Join Us" button functionality
+        document.getElementById("joinUsBtn").addEventListener("click", function () {
+            // Push the current state to the history stack
+            history.pushState({ page: "welcome" }, "Welcome", "");
+        
+            // Replace content with the main website content
+            document.getElementById("content").innerHTML = `
+                <h1>Main Website</h1>
+                <p>Welcome to the main section of our website. Have a great time!</p>
+            `;
+        });
+        
+        // Handle the browser's back button
+        window.addEventListener("popstate", function (event) {
+            if (event.state && event.state.page === "welcome") {
+                // Restore the welcome content
+                document.getElementById("content").innerHTML = `
+                    <h1>Welcome to My Website</h1>
+                    <p>We are excited to have you here. Explore and enjoy!</p>
+                    <button id="joinUsBtn">Join Us</button>
+                `;
+        
+                // Reattach event listener to the "Join Us" button
+                document.getElementById("joinUsBtn").addEventListener("click", function () {
+                    history.pushState({ page: "welcome" }, "Welcome", "");
+                    document.getElementById("content").innerHTML = `
+                        <h1>Main Website</h1>
+                        <p>Welcome to the main section of our website. Have a great time!</p>
+                    `;
+                });
+            }
+        });
+        </script>
+    
+    <script>
+        
+        // Select the toggle button and the navigation list
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+    </script>
+    <script>
+        // Add an event listener to toggle the navigation visibility
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navList.classList.toggle('visible'); // Add or remove the 'visible' class
+    });
+}
+    </script>
+    <script>
+    
+            // Show loading screen for a few seconds, then display the main content
+            window.addEventListener("load", function() {
+                setTimeout(() => {
+                    // Hide the loading screen
+                    document.getElementById("loading").style.display = "none";
+                    
+                    // Show the main content
+                    document.getElementById("content").style.display = "block";
+                }, 3000); // Loading screen duration in milliseconds (3 seconds)
+            });
+    </script>
+    <script>
+        const image = document.getElementById('image');
+
+        // Add red filter on touch or hover
+        image.addEventListener('mouseover', () => {
+            image.classList.add('red-filter');
+        });
+        
+        // Remove red filter when not interacting
+        image.addEventListener('mouseout', () => {
+            image.classList.remove('red-filter');
+        });
+    </script>
+    <script>
+        
+        // Scroll to About Us section when button is clicked
+        aboutBtn.addEventListener('click', () => {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+            
+        });
+    </script>
+    <script>
+        const homeBtn = document.getElementById('homeBtn');
+        const homeSection = document.getElementById('home');
+        // Scroll to Home section
+        homeBtn.addEventListener('click', () => {
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        const aboutBtn = document.getElementById('aboutBtn');
+if (aboutBtn) {
+    aboutBtn.addEventListener('click', () => {
+        const aboutSection = document.getElementById('about-us');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
+    </script>
+    <script>
+        // JavaScript to change the content dynamically
+        document.getElementById("joinUsBtn").addEventListener("click", function() {
+            // Replace the content inside the #content div
+            document.getElementById("content").innerHTML = `
+                <h1>My Website</h1>
+                <p>Welcome to the main content of the website. Enjoy exploring!</p>
+                 <section id="home">
+
+   
+    <header class="header">
+       
+        <div class="logo">||  Sadaqah ||</div>
+        
+       
+       
+        <nav class="nav">
+            <ul class="nav-list">
+               <button id="homeBtn" class="home"> <li><a href="#">Home</a></li> </button>
+                <li><a href="#">Social Network</a></li>
+                <li><a href="#">Causes</a></li>
+               <button class="bott" id="aboutBtn">
+                    <li><a href="#about-us">About Us</a></li>
+                </button 
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="donate-btn">Make a Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+    <main class="hero-section">
+        <div class="hero-content">
+            <h3>Get Started Today</h3>
+            <h1>Your gift will make the poor happy.</h1>
+            <form action="/donate" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="number" name="amount" placeholder="Donation Amount" required>
+                <button type="submit" class="btn">Donate</button>
+            </form>
+        </div>
+    </main>
+
+        <div class="hero-image">
+            <img src="charityy.png.png">
+        
+        </div>
+        section
+        
+   <section id="about-us">
+
+  
+    <div class="page"> <p id="para" class="pages">
+            ---
+<br><br><br>
+
+**Welcome to Sadaqah**  <br><br><br>
+
+At Sadaqah, we are driven by a profound belief: <br>
+**every soul deserves a chance to live with dignity, hope, and love.** <br>
+We exist because too many voices in the world go unheard,<br>
+too many hands reach out for help and find none,<br>
+and too many hearts ache for kindness in the face of despair.  <br>
+<br><br><br>
+
+ **Our Mission**  
+To stand beside the vulnerable, the overlooked, and the broken. <br> 
+To bring light to those living in darkness, comfort to those in pain, <br>
+and hope to those who feel forgotten. With every step we take, <br>
+ we aim to heal, empower, and restore faith in the beauty of humanity. <br>  
+ <br><br><br>
+
+**Our Vision**  
+A world where no child sleeps hungry, no family is torn apart by poverty,<br> 
+and no life is left to struggle in silence. <br>
+We dream of a future where compassion knows no boundaries, <br>
+where every individual feels seen, valued, and <br> 
+cherished—because every life matters, <br>
+ and every heart deserves to feel hope.  
+ <br><br><br>
+
+---
+</section>
+ </p> </div>
+            `;
+        });
+    
+        
+    </script>
+    <script>
+
+            // Scroll to "About Us" section when button is clicked
+            document.getElementById("aboutBtn").addEventListener("click", () => {
+                document.getElementById("para").scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
+    
+</body>
+</html>
