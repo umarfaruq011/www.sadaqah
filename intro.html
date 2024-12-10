@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sadaqah Website</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="LOGO.PNG.png" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #dbd0d08e;
+        }
+
+        .join {
+            font-size: 45px;
+            font-family: arial;
+            margin-top: 25px;
+            background-color: rgb(252, 15, 15);
+            color: rgba(253, 253, 253, 0.822);
+            border-style: solid;
+            border-radius: 25px;
+            height: 70px;
+            width: 250px;
+        }
+
+        .join:hover {
+            background-color: greenyellow;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            height: 55px;
+            left: 0;
+            right: 0;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 50px;
+            background-color:rgb(12, 11, 11);
+            border: none;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f4a323;
+        }
+
+        .lgo {
+            text-align: center;
+        }
+
+        .image {
+            width: 300px;
+            height: auto;
+            margin-top: 50px;
+            transition: filter 0.5s ease;
+            border-radius: 100px;
+        }
+
+        .red-filter {
+            filter: brightness(1.2) hue-rotate(-90deg);
+        }
+
+        .bott {
+            border: none;
+            background-color: black;
+        }
+
+        .home {
+            border: none;
+            background-color: black;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            background-color: #000000;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .nav-list li a:hover {
+            color: rgb(209, 29, 155);
+            text-decoration: underline;
+        }
+
+        .donate-btn {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .donate-btn:hover {
+            background-color: #36ff0e;
+        }
+
+        .pages {
+            font-family: roboto, arial;
+            font-size: 18px;
+            position: absolute;
+            margin-left: 45px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page {
+            height: 10%;
+            width: 20px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+        .sadakah {
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            margin-top: 30px;
+            display: block;
+        }
+
+        .hero-content {
+            max-width: 40%;
+        }
+
+        .hero-content h3 {
+            font-size: 24px;
+            color: #f01010;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: #f4a323;
+            margin-bottom: 0;
+        }
+
+        .hero-content .btn {
+            background-color: #000000e0;
+            color: rgb(255, 235, 235);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero-image {
+            margin-top: -380px;
+            display: inline-block;
+            margin-left: 800px;
+        }
+
+        /* Mobile Navigation */
+        .nav-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-list.visible {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            @media(max-width: 1285px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+
+    </style>
+ <section id="home">
+
+   
+    <header class="header">
+       
+        <div class="logo">||  Sadaqah ||</div>
+        
+       
+       
+        <nav class="nav">
+            <ul class="nav-list">
+               <button id="homeBtn" class="home"> <li><a href="#">Home</a></li> </button>
+                <li><a href="#">Social Network</a></li>
+                <li><a href="#">Causes</a></li>
+              <button class="bott" id="aboutBtn">
+                <li><a href="#">About Us</a></li>
+              </button> 
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="donate-btn">Make a Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main class="hero-section">
+        <div class="hero-content">
+            <h3>Get Started Today</h3>
+            <h1>Your gift will make the poor happy.</h1>
+            <form id="donationForm">
+                <select id="countrySelect" name="country" required>
+                    <option value="">Select Your Country</option>
+                    <option value="saudi-arabia">Saudi Arabia
+
+                      
+
+                    </option>
+                    <option value="dubai">Dubai</option>
+                    <option value="india">India</option>
+                    <option value="qatar">Qatar</option>
+                    <option value="kuwait">Kuwait</option>
+                </select>
+                <input type="text" id="donorName" name="name" placeholder="Your Name" required>
+                <input type="number" id="donationAmount" name="amount" placeholder="Donation Amount" required>
+                <div id="saudiPaymentOptions" style="display: none; margin-top: 10px;">
+                    <h4>Choose a Payment Method (Saudi Arabia):</h4>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="stc-pay" required> STC Pay
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="ur-pay" required> UrPay
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="al-rajhi-bank" required> Al Rajhi Bank
+                    </label>
+                </div>
+                <button type="button" class="btn" id="donateBtn">Donate</button>
+            </form>
+            <div id="responseMessage" style="margin-top: 15px; color: green;"></div>
+        </div>
+    </main>
+    
+    
+
+        <div class="hero-image">
+            <img src="charityy.png.png">
+        
+        </div>
+   <section id="about-us">
+
+  
+    <div class="page"> <p id="para" class="pages">
+            ---
+<br><br><br>
+
+**Welcome to Sadaqah**  <br><br><br>
+
+At Sadaqah, we are driven by a profound belief: <br>
+**every soul deserves a chance to live with dignity, hope, and love.** <br>
+We exist because too many voices in the world go unheard,<br>
+too many hands reach out for help and find none,<br>
+and too many hearts ache for kindness in the face of despair.  <br>
+<br><br><br>
+
+ **Our Mission**  
+To stand beside the vulnerable, the overlooked, and the broken. <br> 
+To bring light to those living in darkness, comfort to those in pain, <br>
+and hope to those who feel forgotten. With every step we take, <br>
+ we aim to heal, empower, and restore faith in the beauty of humanity. <br>  
+ <br><br><br>
+
+**Our Vision**  
+A world where no child sleeps hungry, no family is torn apart by poverty,<br> 
+and no life is left to struggle in silence. <br>
+We dream of a future where compassion knows no boundaries, <br>
+where every individual feels seen, valued, and <br> 
+cherished—because every life matters, <br>
+ and every heart deserves to feel hope.  
+ <br><br><br>
+
+---
+</section>
+ </p> </div>
+            <script src="main.js"></script>
+
+</body>
+</html>
